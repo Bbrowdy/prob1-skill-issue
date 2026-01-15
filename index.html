@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle jy2rouc8</title>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background: #0b0b0b;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #b00000, #000);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin: 15px 0;
+  opacity: .8;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 15px 30px;
+  background: red;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.section {
+  padding: 70px 12%;
+}
+
+.dark {
+  background: #111;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.stat {
+  background: #1a1a1a;
+  padding: 20px;
+  border-left: 4px solid red;
+}
+
+.list li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.flatline {
+  color: red;
+  font-size: 1.7rem;
+}
+
+.news {
+  background: #1a1a1a;
+  padding: 25px;
+  border-left: 4px solid red;
+}
+
+blockquote {
+  background: #1a1a1a;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-left: 4px solid red;
+}
+
+footer {
+  background: black;
+  text-align: center;
+  padding: 30px;
+  opacity: .6;
+}
+
+/* Scan */
+.bar {
+  background: #222;
+  height: 18px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: red;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #111;
+  border: 2px solid red;
+  padding: 25px;
+  display: none;
+  z-index: 999;
+}
+.popup button {
+  margin-top: 15px;
+  padding: 8px 16px;
+}
+
+
+  </style>
+
+  
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prob 1ǃ – Fortnite Skill Investigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio id="deathSound" src="https://www.myinstants.com/media/sounds/fortnite-death.mp3"></audio>
+
+<div class="popup" id="popup">
+  <h3>⚠️ Fortnite Error</h3>
+  <p>Player skill not found.</p>
+  <button onclick="closePopup()">OK</button>
+</div>
+
+<header class="hero">
+  <h1>PROB 1ǃ</h1>
+  <p class="subtitle">Independent Fortnite Skill Investigation</p>
+  <a class="btn" target="_blank"
+     href="https://fortnitetracker.com/profile/all/prob%201%C7%83/events">
+     View Official Evidence 📉
+  </a>
+</header>
+
+<section class="section">
+  <h2>🧠 Live Skill Scan</h2>
+  <div class="scan">
+    <div class="bar"><span id="scanBar"></span></div>
+    <p id="scanText">Scanning...</p>
+  </div>
+</section>
+
+<section class="section dark">
+  <h2>📊 Live Stats (Updated Every Match)</h2>
+  <div class="stats-grid">
+    <div class="stat"><h3>K/D</h3><p>0.00</p></div>
+    <div class="stat"><h3>Wins</h3><p>0</p></div>
+    <div class="stat"><h3>Placement</h3><p>98th</p></div>
+    <div class="stat"><h3>Threat Level</h3><p>None</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>💀 Career Highlights</h2>
+  <ul class="list">
+    <li>• Dies before first zone closes</li>
+    <li>• Loots for 10 minutes, panics instantly</li>
+    <li>• Builds one wall, edits himself out</li>
+    <li>• Says “he’s one shot” (enemy full HP)</li>
+  </ul>
+</section>
+
+<section class="section dark">
+  <h2>📉 Skill Progress Over Time</h2>
+  <p class="flatline">━━━━━━━━━━━━━━━━━━━━━━</p>
+  <p class="note">Flat since Chapter 1</p>
+</section>
+
+<section class="section">
+  <h2>📰 Fortnite News Network</h2>
+  <div class="news">
+    <h3>Local Player Still Bad After Years of Practice</h3>
+    <p>
+      Sources confirm that despite thousands of matches,
+      Prob 1ǃ has shown no measurable improvement.
+      Experts cite “skill issue” as the primary cause.
+    </p>
+  </div>
+</section>
+
+<section class="section dark">
+  <h2>🧂 Common Excuses Database</h2>
+  <blockquote>“I wasn’t warmed up”</blockquote>
+  <blockquote>“He’s on controller”</blockquote>
+  <blockquote>“Lag spike”</blockquote>
+  <blockquote>“I wasn’t trying”</blockquote>
+</section>
+
+<footer>
+  <p>This website is satire.</p>
+  <p>But the tracker is real.</p>
+</footer>
+
+</body>
+</html>
+
+
+  <script>
+    const sound = document.getElementById("deathSound");
+const popup = document.getElementById("popup");
+const scanBar = document.getElementById("scanBar");
+const scanText = document.getElementById("scanText");
+
+window.onload = () => {
+  sound.volume = 0.4;
+  sound.play().catch(() => {});
+  setTimeout(() => popup.style.display = "block", 1200);
+  startScan();
+};
+
+function closePopup() {
+  popup.style.display = "none";
+}
+
+function startScan() {
+  let width = 0;
+  const scan = setInterval(() => {
+    if (width >= 12) {
+      clearInterval(scan);
+      scanText.innerText = "Result: Skill Issue Detected ❌";
+    } else {
+      width++;
+      scanBar.style.width = width + "%";
+    }
+  }, 120);
+}
+
+const insults = [
+  "Prob 1ǃ died off spawn again.",
+  "Building detected. Immediately failed.",
+  "Tracker requested mercy.",
+  "He blamed lag.",
+  "Confidence high. Skill low."
+];
+
+setInterval(() => {
+  console.log(insults[Math.floor(Math.random() * insults.length)]);
+}, 3000);
+
+  </script>
+</body>
+</html>
