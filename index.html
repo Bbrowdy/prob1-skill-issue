@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prob 1ǃ – Fortnite Skill Investigation</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-    body { background: #0b0b0b; color: white; }
-    .hero { min-height: 100vh; background: linear-gradient(135deg, #b00000, #000); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-    .hero h1 { font-size: 5rem; font-weight: 900; }
-    .subtitle { margin: 15px 0; opacity: .8; }
-    .btn { margin-top: 25px; padding: 15px 30px; background: red; color: white; text-decoration: none; font-weight: 700; border-radius: 6px; }
-    .section { padding: 70px 12%; }
+    body { background: #0b0b0b; color: white; height: 100vh; display: flex; flex-direction: column; }
+    .hero { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #b00000, #000); padding: 20px; }
+    .hero h1 { font-size: 5rem; font-weight: 900; margin-bottom: 10px; }
+    .subtitle { margin-bottom: 20px; opacity: 0.8; font-size: 1.5rem; }
+    .btn { padding: 15px 30px; background: red; color: white; text-decoration: none; font-weight: 700; border-radius: 6px; transition: 0.3s; }
+    .btn:hover { background: #ff1a1a; }
+    .section { padding: 50px 10%; }
     .dark { background: #111; }
     .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; }
-    .stat { background: #1a1a1a; padding: 20px; border-left: 4px solid red; }
+    .stat { background: #1a1a1a; padding: 20px; border-left: 4px solid red; text-align: center; }
     .list li { list-style: none; margin-bottom: 12px; }
-    .flatline { color: red; font-size: 1.7rem; }
-    .news { background: #1a1a1a; padding: 25px; border-left: 4px solid red; }
+    .flatline { color: red; font-size: 1.7rem; text-align: center; margin-bottom: 10px; }
+    .news { background: #1a1a1a; padding: 25px; border-left: 4px solid red; margin-bottom: 20px; }
     blockquote { background: #1a1a1a; padding: 18px; margin-bottom: 12px; border-left: 4px solid red; }
-    footer { background: black; text-align: center; padding: 30px; opacity: .6; }
-    .bar { background: #222; height: 18px; width: 100%; border-radius: 20px; overflow: hidden; }
-    .bar span { display: block; height: 100%; width: 0%; background: red; }
-    .popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; border: 2px solid red; padding: 25px; display: none; z-index: 999; }
-    .popup button { margin-top: 15px; padding: 8px 16px; }
+    footer { background: black; text-align: center; padding: 30px; opacity: 0.8; }
+    .bar { background: #222; height: 18px; width: 100%; border-radius: 20px; overflow: hidden; margin-top: 10px; }
+    .bar span { display: block; height: 100%; width: 0%; background: red; transition: width 0.2s; }
+    .popup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; border: 2px solid red; padding: 25px; display: none; z-index: 999; text-align: center; }
+    .popup button { margin-top: 15px; padding: 8px 16px; background: red; border: none; color: white; cursor: pointer; border-radius: 4px; }
+    img { max-width: 100%; border-radius: 10px; margin: 20px 0; }
   </style>
 </head>
 <body>
@@ -43,6 +45,7 @@
   <a class="btn" target="_blank" href="https://fortnitetracker.com/profile/all/prob%201%C7%83/events">
     View Official Evidence 📉
   </a>
+  <img src="https://i.imgur.com/fS0Fq6P.png" alt="Funny Fortnite Meme">
 </header>
 
 <section class="section">
@@ -83,11 +86,7 @@
   <h2>📰 Fortnite News Network</h2>
   <div class="news">
     <h3>Local Player Still Bad After Years of Practice</h3>
-    <p>
-      Sources confirm that despite thousands of matches,
-      Prob 1ǃ has shown no measurable improvement.
-      Experts cite “skill issue” as the primary cause.
-    </p>
+    <p>Despite thousands of matches, Prob 1ǃ has shown no measurable improvement. Experts cite “skill issue” as the cause.</p>
   </div>
 </section>
 
@@ -147,4 +146,3 @@ setInterval(() => {
 
 </body>
 </html>
-
