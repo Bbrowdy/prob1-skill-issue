@@ -45,7 +45,7 @@
   <a class="btn" target="_blank" href="https://fortnitetracker.com/profile/all/prob%201%C7%83/events">
     View Official Evidence 📉
   </a>
-  <img src="https://i.imgur.com/fS0Fq6P.png" alt="Funny Fortnite Meme">
+  <img src="https://i.imgur.com/Wf7L3zq.png" alt="Funny Fortnite Meme">
 </header>
 
 <section class="section">
@@ -110,13 +110,15 @@ const scanBar = document.getElementById("scanBar");
 const scanText = document.getElementById("scanText");
 
 window.onload = () => {
-  sound.volume = 0.4;
-  sound.play().catch(() => {});
   setTimeout(() => popup.style.display = "block", 1200);
   startScan();
 };
 
-function closePopup() { popup.style.display = "none"; }
+function closePopup() {
+  sound.volume = 0.4;
+  sound.play().catch(() => {});
+  popup.style.display = "none";
+}
 
 function startScan() {
   let width = 0;
